@@ -1,7 +1,7 @@
 # ask: Natural Language to Shell Command
 
 **ask** is an AI-powered CLI tool that turns plain English into safe, ready-to-run shell commands.  
-Powered by Groq and LLaMA 3 70B, it helps you automate the terminal—no scripting required.
+Powered by Groq and LLaMA 3.3 70B, it helps you automate the terminal—no scripting required.
 
 ---
 
