@@ -23,7 +23,7 @@ Powered by Groq and LLaMA 3 70B, it helps you automate the terminal—no scripti
 pipx install git+https://github.com/Nishant-k-sagar/ask.git
 ```
 
-### 2. Clone the Repository
+### OR Clone the Repository
 
 Clone the latest version of the project from GitHub:
 
