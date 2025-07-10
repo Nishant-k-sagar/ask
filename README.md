@@ -7,20 +7,9 @@ Powered by Groq and LLaMA 3 70B, it helps you automate the terminal—no scripti
 
 ## 🚀 Quick Start
 
-### 1. Clone the Repository
-
-Clone the latest version of the project from GitHub:
-
-```bash
-git clone https://github.com/Nishant-k-sagar/ask.git
-# or using SSH
-git clone git@github.com:Nishant-k-sagar/ask.git
-cd ask
-```
-
 ---
 
-### 2. Install with pipx (Recommended)
+### 1. Install with pipx (Recommended)
 
 `pipx` keeps `ask` isolated and globally available—no Python or pip conflicts.
 
@@ -34,7 +23,16 @@ cd ask
 pipx install git+https://github.com/Nishant-k-sagar/ask.git
 ```
 
-**Or, if you’ve already cloned the repo:**
+### 2. Clone the Repository
+
+Clone the latest version of the project from GitHub:
+
+```bash
+git clone https://github.com/Nishant-k-sagar/ask.git
+# or using SSH
+git clone git@github.com:Nishant-k-sagar/ask.git
+cd ask
+```
 
 ```bash
 pipx install .
@@ -48,7 +46,9 @@ pipx install .
 
 ```bash
 export GROQ_API_KEY="your_api_key_here"
+nano ~/.zshrc  or nano  ~/.bashrc (for respective terminals)
 # Add this line to ~/.zshrc or ~/.bashrc for future sessions
+source ~/.zshrc or source ~/.bashrc
 ```
 
 **Windows:**
