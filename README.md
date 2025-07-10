@@ -40,7 +40,7 @@ pipx install .
 
 ---
 
-### 3. Set Your Groq API Key
+### 2. Set Your Groq API Key
 
 **Linux/macOS:**
 
