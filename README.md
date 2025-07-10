@@ -13,7 +13,9 @@ Clone the latest version of the project from GitHub:
 
 ```bash
 git clone https://github.com/Nishant-k-sagar/ask.git
-# or using SSH
+# or using SSH 
+or
+
 git clone git@github.com:Nishant-k-sagar/ask.git
 cd ask
 ```

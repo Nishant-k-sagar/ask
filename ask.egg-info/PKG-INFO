@@ -1,6 +1,8 @@
 Metadata-Version: 2.4
 Name: ask
 Version: 0.1
+License-File: LICENSE
 Requires-Dist: groq
 Requires-Dist: pyperclip
+Dynamic: license-file
 Dynamic: requires-dist

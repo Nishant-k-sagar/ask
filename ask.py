@@ -41,7 +41,7 @@ def get_command_from_groq(client, user_prompt):
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": user_prompt},
             ],
-            model="llama3-70b-8192",
+            model="llama-3.3-70b-versatile",
             temperature=0,
             max_tokens=500,
         )
