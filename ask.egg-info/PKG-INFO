@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: ask
+Version: 0.1
+Requires-Dist: groq
+Requires-Dist: pyperclip
+Dynamic: requires-dist
