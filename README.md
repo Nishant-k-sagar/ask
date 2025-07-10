@@ -94,7 +94,7 @@ chmod +x ask
 sudo mv ask /usr/local/bin/ask
 ```
 
-You can now run `ask` from anywhere in your terminal.
+You can now run `ask` from anywhere in your terminal after setting up the groq api key.
 
 ### Windows
 
