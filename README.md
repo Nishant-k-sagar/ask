@@ -7,7 +7,20 @@ Powered by Groq and LLaMA 3 70B, it helps you automate the terminal—no scripti
 
 ## 🚀 Quick Start
 
-### 1. Install with pipx (Recommended)
+### 1. Clone the Repository
+
+Clone the latest version of the project from GitHub:
+
+```bash
+git clone https://github.com/Nishant-k-sagar/ask.git
+# or using SSH
+git clone git@github.com:Nishant-k-sagar/ask.git
+cd ask
+```
+
+---
+
+### 2. Install with pipx (Recommended)
 
 `pipx` keeps `ask` isolated and globally available—no Python or pip conflicts.
 
@@ -15,28 +28,27 @@ Powered by Groq and LLaMA 3 70B, it helps you automate the terminal—no scripti
 - Python 3.8+
 - pipx (`sudo pacman -S python-pipx`, `sudo apt install pipx`, or `brew install pipx`)
 
-**Install:**
+**Install directly from GitHub:**
 
 ```bash
-pipx install git+https://github.com/yourusername/ask.git
+pipx install git+https://github.com/Nishant-k-sagar/ask.git
 ```
 
-Or, if you’ve cloned the repo:
+**Or, if you’ve already cloned the repo:**
 
 ```bash
-cd ask
 pipx install .
 ```
 
 ---
 
-### 2. Set Your Groq API Key
+### 3. Set Your Groq API Key
 
 **Linux/macOS:**
 
 ```bash
 export GROQ_API_KEY="your_api_key_here"
-# Add this to ~/.zshrc or ~/.bashrc for future sessions
+# Add this line to ~/.zshrc or ~/.bashrc for future sessions
 ```
 
 **Windows:**
@@ -45,13 +57,13 @@ export GROQ_API_KEY="your_api_key_here"
 setx GROQ_API_KEY "your_api_key_here"
 ```
 
-*Restart your terminal after setting.*
+*Restart your terminal after setting the API key.*
 
 ---
 
 ## 🛠️ Usage
 
-Just type:
+Once installed, just type:
 
 ```bash
 ask "your command in plain English"
@@ -66,7 +78,7 @@ ask show disk usage for /home
 ```
 
 - The tool prints the shell command, copies it to your clipboard, and (if safe) offers to execute it.
-- For commands like `cd` or `export`, you’ll be prompted to paste the command yourself (since these can’t change your parent terminal’s state).
+- For commands like `cd` or `export`, you’ll be prompted to paste the command yourself (since child processes cannot change the parent shell's state).
 
 ---
 
@@ -74,62 +86,71 @@ ask show disk usage for /home
 
 ### Linux
 
-1. Download `ask` from [Releases](https://github.com/Nishant-k-sagar/ask/tree/master/dist).
-2. Make it executable and move it to your PATH:
+1. Download the prebuilt binary from the [Releases](https://github.com/Nishant-k-sagar/ask/tree/master/dist) section.
+2. Make it executable and move it to your system `PATH`:
 
 ```bash
 chmod +x ask
 sudo mv ask /usr/local/bin/ask
 ```
 
+You can now run `ask` from anywhere in your terminal.
+
 ### Windows
 
-Currently packaged installer or .exe file is not availbale. Install using github repo.<!-- 1. Download `ask.exe` from [Releases](https://github.com/yourusername/ask/releases). -->
-<!-- 2. Move it to a folder in your PATH (e.g., `C:\Scripts`). -->
+Currently, no `.exe` installer is available. Please use the `pipx` or local install methods for now.
 
 ---
 
 ## 🔍 How It Works
 
-- Uses Groq’s LLaMA 3 70B model for high-accuracy command generation.
-- Adds a safety comment: `# safest`, `# safer`, or `# risky`.
-- Copies the command to your clipboard (uses `pyperclip`; Linux users may need `xclip` or `xsel`).
-- Detects shell environment commands and guides you to paste them manually.
+- Uses Groq’s LLaMA 3 70B model via API for accurate shell command generation.
+- Tags each command with a safety comment: `# safest`, `# safer`, or `# risky`.
+- Automatically copies the command to your clipboard using `pyperclip`.
+- Commands that modify the shell environment are shown but not executed automatically.
 
 ---
 
 ## 🧑‍💻 Local Development
 
+If you want to run or develop locally:
+
 ```bash
-git clone https://github.com/Nishant-k-sagar/ask.git or
-git clone git@github.com:Nishant-k-sagar/ask.git
+git clone https://github.com/Nishant-k-sagar/ask.git
 cd ask
 python3 -m venv venv
 source venv/bin/activate
-pipx install -r requirements.txt
-ask "your command in plain English"
+pip install -r requirements.txt
+python ask.py "your command in plain English"
 ```
+
+> Use `python ask.py "your prompt"` for testing the tool directly.
 
 ---
 
 ## ❓ Troubleshooting
 
-- **No command or API error**: Check your `GROQ_API_KEY` and internet connection.
-- **Clipboard not working**: On Linux, install'pyperclip' globally.
+- **No command or API error**: Check that your `GROQ_API_KEY` is set correctly and your internet connection is stable.
+- **Clipboard not working**: On Linux, ensure `pyperclip` works by installing `xclip` or `xsel`:
   
-- **"Command not found"**: Make sure `ask` is in your `PATH` and is executable.
+```bash
+sudo pacman -S xclip       # Manjaro/Arch
+sudo apt install xclip     # Ubuntu/Debian
+```
+
+- **"Command not found"**: Ensure `ask` is installed to a location in your system `PATH`.
 
 ---
 
 ## 🤝 Contributing
 
-PRs are welcome! Open an issue to discuss features or bugs first.
+Pull Requests are welcome! If you'd like to add features or fix issues, please open an issue first to discuss it.
 
 ---
 
 ## 📄 License
 
-Non-commercial OPEN to all. See [LICENSE](LICENSE).
+Non-commercial use allowed. See [LICENSE](LICENSE) for details.
 
 ---
 
